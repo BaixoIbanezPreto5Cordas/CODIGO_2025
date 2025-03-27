@@ -1,4 +1,4 @@
-CREATE TABLE Paciente(
+``` CREATE TABLE Paciente(
 	  CPF            varchar(11) PRIMARY KEY, 
 	  tp_sang        varchar(3),
 	  nasc           date,
@@ -6,3 +6,8 @@ CREATE TABLE Paciente(
     contato        int,
     endereco       varchar(100)         
 ); 
+
+INSERT INTO Paciente VALUES("98765432100", "AB+", "31/12/1960", "camarão, corante, ovo, dipirona", "819784716507", "Pau Amarelo, Recife, PE, Brasil");
+INSERT INTO Paciente VALUES("69666696969", "A-", "18/08/1987", "amendoim", "81969696969", "Linha do tiro, Recife, PE, Brasil");
+INSERT INTO Paciente VALUES("00000000001", "O-", "24/12/1000", "crente", "81901050022", "Janga, Paulista, PE, Brasil");```
+
