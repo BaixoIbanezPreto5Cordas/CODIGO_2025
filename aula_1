@@ -1,0 +1,8 @@
+CREATE TABLE Paciente(
+	  CPF            varchar(11) PRIMARY KEY, 
+	  tp_sang        varchar(3),
+	  nasc           date,
+    alergias       varchar(100),
+    contato        int,
+    endereco       varchar(100)         
+); 
