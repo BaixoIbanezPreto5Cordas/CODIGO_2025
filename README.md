@@ -1,3 +1,4 @@
+- AULA 1
 ``` sql 
 
 CREATE TABLE Paciente(
@@ -23,3 +24,20 @@ CREATE TABLE Medico(
   Graduacao     varchar (100)
 );
 ```
+
+- AULA 2
+
+``` sql
+CREATE TABLE Pessoa(
+	CPF         varchar(14)
+	nome        varchar(100)
+	genero      varchar(10)
+	data_nasc   date
+);
+
+CREATE TABLE Recebe(
+  cod        int PRIMARY KEY,
+  CPF      varchar(14),
+  FOREGEIN KEY (CPF) REFERENCES Pessoa (CPF)
+);
+
