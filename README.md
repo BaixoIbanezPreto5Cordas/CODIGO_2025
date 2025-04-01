@@ -44,17 +44,18 @@ CREATE TABLE Recebe(
 
 - AULA 3
 ``` sql
-CREATE TABLE Proatg(
+CREATE TABLE Protag(
 	nome         varchar(60) PRIMARY KEY,
 	hp           varchar(20),
-	mp           varchar(20)
+	mp           varchar(20),
 	fadiga       varchar(20),
-        forca        int,
-        agilidade    int,
-        percepcao    int,
-        vitalidade   int,
-        intelecto    int,
-        pts_hab      int,
+    forca        int,
+    agilidade    int,
+    percepcao    int,
+    vitalidade   int,
+    intelecto    int,
+    pts_hab      int
+  
 );
 
 INSERT INTO Protag VALUES("Sung Jin Woo", "100/100", "10/10", "50/50", 95, 87, 39, 16, 57, 7);
