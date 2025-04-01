@@ -29,15 +29,31 @@ CREATE TABLE Medico(
 
 ``` sql
 CREATE TABLE Pessoa(
-	CPF         varchar(14)
-	nome        varchar(100)
-	genero      varchar(10)
-	data_nasc   date
+	CPF         varchar(14),
+	nome        varchar(100),
+	genero      varchar(10),
+	data_nasc   date,
 );
 
 CREATE TABLE Recebe(
   cod        int PRIMARY KEY,
   CPF      varchar(14),
   FOREGEIN KEY (CPF) REFERENCES Pessoa (CPF)
+);
+```
+
+- AULA 3
+``` sql
+CREATE TABLE Proatg(
+	nome         varchar(60) PRIMARY KEY,
+	hp           varchar(20),
+	mp           varchar(20)
+	fadiga       varchar(20),
+        forca        int,
+        agilidade    int,
+        percepcao    int,
+        vitalidade   int,
+        intelecto    int,
+        pts_hab      int,
 );
 
