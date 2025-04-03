@@ -10,7 +10,7 @@ CREATE TABLE Musicas (
 );
 
 CREATE TABLE Artistas (
-  CPF               int,
+  CPF               int PRIMARY KEY,
   nome              varchar (100),
   nat               varchar (2),
   cidade            varchar (30),
