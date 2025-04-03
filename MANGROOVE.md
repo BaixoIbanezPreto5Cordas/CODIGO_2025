@@ -21,6 +21,10 @@ CREATE TABLE Comunidade (
   ID_c                int PRIMARY KEY,	
   qtd_seg             int,
   qtd_posts           int
-  
 );
 
+CREATE TABLE Din_arrecadado (
+  ID_d                    int PRIMARY KEY,
+  valor                   float,
+  banco                   varchar (300)
+);
