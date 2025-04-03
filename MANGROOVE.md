@@ -16,3 +16,11 @@ CREATE TABLE Artistas (
   cidade            varchar (30),
   album             varchar (50)
 );
+
+CREATE TABLE Comunidade (
+  ID_c                int PRIMARY KEY,	
+  qtd_seg             int,
+  qtd_posts           int
+  
+);
+
