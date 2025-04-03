@@ -8,3 +8,11 @@ CREATE TABLE Musicas (
   likes            int,
   duracao          time
 );
+
+CREATE TABLE Artistas (
+  CPF               int,
+  nome              varchar (100),
+  nat               varchar (2),
+  cidade            varchar (30),
+  album             varchar (50)
+);
