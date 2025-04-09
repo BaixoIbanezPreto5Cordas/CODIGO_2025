@@ -1,4 +1,8 @@
 ``` sql
+DROP TABLE Customers;
+DROP TABLE Orders;
+DROP TABLE Shippings;
+
 CREATE TABLE Musicas (
   ID_music         int PRIMARY KEY,
   nome             varchar (50),
@@ -40,9 +44,17 @@ CREATE TABLE Agen_Publi (
 );
 
 CREATE TABLE Contatos (
-  Email         varchar (50),
+  Email         varchar (50) PRIMARY KEY
   Telefone      int,
   Red_Soc       varchar (50),
   CNPJ          int,
   FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
+);
+
+CREATE TABLE Contatos(
+  Email        varchar(50) PRIMARY KEY
+  Telefone    int,
+  Rede_Soc    varchar(50),
+  CNPJ            int,
+  FOREIGN KEY (CNPJ) REFERENCES Ongs (CNPJ)
 );
