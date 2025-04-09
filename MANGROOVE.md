@@ -13,12 +13,41 @@ CREATE TABLE Musicas (
   duracao          time
 );
 
+CREATE TABLE Usuários (
+Cod_U Int PRIMARY KEY,
+Nome varchar(50),
+Nat varchar(2),
+Data_nasc date
+);
+
+CREATE TABLE Contatos_U (
+  ID_Con_U     int PRIMARY KEY,
+  Cod_U        Int,
+  Nome         varchar(50),
+  Nat          varchar(2),
+  Data_nasc    date,
+ FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U)
+);
+
 CREATE TABLE Artistas (
   CPF               int PRIMARY KEY,
   nome              varchar (100),
   nat               varchar (2),
   cidade            varchar (30),
   album             varchar (50)
+);
+
+CREATE TABLE Rede_Soc (
+  ID_Rede          int PRIMARY KEY,
+  Email            varchar (50),
+  Insta            varchar (50),
+  Facebook         varchar (50),
+  Tiktok           varchar (50),
+  Kofi            varchar (50),
+  Lolja            varchar (50),
+  Patreon          varchar (50),
+  CPF              int,
+  FOREIGN KEY (CPF) REFERENCES Artistas (CPF)
 );
 
 CREATE TABLE Comunidade (
@@ -35,7 +64,7 @@ CREATE TABLE Din_arrecadado (
 
 CREATE TABLE Ongs(
   CNPJ        int PRIMARY KEY,
-Sede        varchar(100)
+  Sede        varchar(100)
 );
 
 CREATE TABLE Cntt_ONG (
