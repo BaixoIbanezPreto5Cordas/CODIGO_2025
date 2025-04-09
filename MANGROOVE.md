@@ -33,3 +33,8 @@ CREATE TABLE Ongs(
   CNPJ        int PRIMARY KEY,
 Sede        varchar(100)
 );
+
+CREATE TABLE Agen_Publi (
+  CNPJ          int PRIMARY KEY,
+  Empresa       varchar (100)
+);
