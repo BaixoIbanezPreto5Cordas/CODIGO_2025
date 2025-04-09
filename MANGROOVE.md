@@ -38,6 +38,24 @@ CREATE TABLE Ongs(
 Sede        varchar(100)
 );
 
+CREATE TABLE Contatos(
+  Email        varchar(50) PRIMARY KEY
+  Telefone    int,
+  Rede_Soc    varchar(50),
+  CNPJ            int,
+  FOREIGN KEY (CNPJ) REFERENCES Ongs (CNPJ)
+);
+
+CREATE TABLE Loc_Op(
+  Estado Varchar(2),
+  Cidade Varchar(30),
+  Bairro Varchar(30),
+  Rua Varchar(30),
+  CEP int,
+  CNPJ int,
+  Foreign key (CNPJ) REFERENCES Ongs (CNPJ)
+);
+
 CREATE TABLE Agen_Publi (
   CNPJ          int PRIMARY KEY,
   Empresa       varchar (100)
@@ -51,10 +69,3 @@ CREATE TABLE Contatos (
   FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
 );
 
-CREATE TABLE Contatos(
-  Email        varchar(50) PRIMARY KEY
-  Telefone    int,
-  Rede_Soc    varchar(50),
-  CNPJ            int,
-  FOREIGN KEY (CNPJ) REFERENCES Ongs (CNPJ)
-);
