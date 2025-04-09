@@ -28,3 +28,8 @@ CREATE TABLE Din_arrecadado (
   valor                   float,
   banco                   varchar (300)
 );
+
+CREATE TABLE Ongs(
+  CNPJ        int PRIMARY KEY,
+Sede        varchar(100)
+);
