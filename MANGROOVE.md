@@ -13,6 +13,13 @@ CREATE TABLE Musicas (
   duracao          time
 );
 
+CREATE TABLE Musicos (
+  Nome_musico       varchar (50) PRIMARY KEY,
+  Data_Pub          date,
+  ID_music          int,
+  FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
+);
+
 CREATE TABLE Usuários (
 Cod_U Int PRIMARY KEY,
 Nome varchar(50),
