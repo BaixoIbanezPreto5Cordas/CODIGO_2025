@@ -20,7 +20,7 @@ CREATE TABLE Musicos (
   FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
 );
 
-CREATE TABLE Usuários (
+CREATE TABLE Usuarios (
 Cod_U Int PRIMARY KEY,
 Nome varchar(50),
 Nat varchar(2),
