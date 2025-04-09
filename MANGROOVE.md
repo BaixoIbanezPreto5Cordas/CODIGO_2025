@@ -23,10 +23,6 @@ CREATE TABLE Comunidade (
   qtd_posts           int
 );
 
-CREATE TABLE Eventos (
-  ID_c            int FOREIGN KEY,
-	
-
 CREATE TABLE Din_arrecadado (
   ID_d                    int PRIMARY KEY,
   valor                   float,
