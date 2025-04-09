@@ -62,7 +62,7 @@ CREATE TABLE Agen_Publi (
 );
 
 CREATE TABLE Cntt_Publi (
-  Email         varchar (50) PRIMARY KEY
+  Email         varchar (50) PRIMARY KEY,
   Telefone      int,
   Red_Soc       varchar (50),
   CNPJ          int,
