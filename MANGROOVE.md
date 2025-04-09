@@ -39,7 +39,7 @@ Sede        varchar(100)
 );
 
 CREATE TABLE Contatos(
-  Email        varchar(50) PRIMARY KEY
+  Email        varchar(50) PRIMARY KEY,
   Telefone    int,
   Rede_Soc    varchar(50),
   CNPJ            int,
