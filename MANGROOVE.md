@@ -47,11 +47,11 @@ CREATE TABLE Cntt_ONG (
 );
 
 CREATE TABLE Loc_Op(
-  Estado Varchar(2),
+  CEP    int PRIMARY KEY,
+  Estado Varchar(2), 
   Cidade Varchar(30),
   Bairro Varchar(30),
   Rua Varchar(30),
-  CEP int,
   CNPJ int,
   Foreign key (CNPJ) REFERENCES Ongs (CNPJ)
 );
