@@ -38,3 +38,11 @@ CREATE TABLE Agen_Publi (
   CNPJ          int PRIMARY KEY,
   Empresa       varchar (100)
 );
+
+CREATE TABLE Contatos (
+  Email         varchar (50),
+  Telefone      int,
+  Red_Soc       varchar (50),
+  CNPJ          int,
+  FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
+);
