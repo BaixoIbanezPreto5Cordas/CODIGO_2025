@@ -38,7 +38,7 @@ CREATE TABLE Ongs(
 Sede        varchar(100)
 );
 
-CREATE TABLE Contatos(
+CREATE TABLE Cntt_ONG (
   Email        varchar(50) PRIMARY KEY,
   Telefone    int,
   Rede_Soc    varchar(50),
@@ -61,7 +61,7 @@ CREATE TABLE Agen_Publi (
   Empresa       varchar (100)
 );
 
-CREATE TABLE Contatos (
+CREATE TABLE Cntt_Publi (
   Email         varchar (50) PRIMARY KEY
   Telefone      int,
   Red_Soc       varchar (50),
