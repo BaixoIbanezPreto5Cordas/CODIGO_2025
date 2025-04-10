@@ -122,6 +122,16 @@ CREATE TABLE Cntt_ONG (
   FOREIGN KEY (CNPJ) REFERENCES Ongs (CNPJ)
 );
 
+CREATE TABLE Ong_rec (
+  ID_TransOng                  int PRIMARY KEY,
+  CNPJ                         int,
+  Valor                        float,
+  Data                         date,
+  Hora                         time,
+  ID_D                         int,
+  FOREIGN KEY (ID_D) REFERENCES Din_arrecadado (ID_D)
+);
+
 CREATE TABLE Loc_Op(
   CEP    int PRIMARY KEY,
   Estado Varchar(2), 
