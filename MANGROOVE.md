@@ -133,5 +133,6 @@ CREATE TABLE PubAlvo_Ag(
   Genero        varchar(30),
   Ocup          varchar(100),
   Nat           varchar(2),
+  CNPJ          int,
   FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
 );
