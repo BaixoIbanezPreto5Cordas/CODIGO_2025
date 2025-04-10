@@ -72,6 +72,17 @@ CREATE TABLE Artistas (
   album             varchar (50)
 );
 
+CREATE TABLE Art_rec (
+  ID_TransArt                       int PRIMARY KEY,
+  Valor                             float,
+  Data                              date,
+  Hora                              time,
+  ID_D                              int,
+  CPF                               int,
+  FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
+  FOREIGN KEY (ID_D) REFERENCES Din_arrecadado (ID_D)
+);
+
 CREATE TABLE Rede_Soc (
   ID_Rede          int PRIMARY KEY,
   Email            varchar (50),
