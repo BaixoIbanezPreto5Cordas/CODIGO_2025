@@ -34,6 +34,15 @@ CREATE TABLE Anuncio (
   CNPJ        int
 );
 
+CREATE TABLE Visualiza_A (
+  ID_V_A   int PRIMARY KEY,
+  ID_A     int,
+  Cod_U    int,
+  Qtd_View int,
+  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
+  FOREIGN KEY (ID_A) REFERENCES Anuncio (ID_A)
+);
+
 CREATE TABLE PubAlvo_An (
   COD_PubAlvo int PRIMARY KEY,
   ID_A        int,
@@ -70,6 +79,15 @@ CREATE TABLE Artistas (
   nat               varchar (2),
   cidade            varchar (30),
   album             varchar (50)
+);
+
+CREATE TABLE Produz (
+  ID_P             int PRIMARY KEY,
+  Data             date,
+  CPF              int,
+  ID_music         int,
+  FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
+  FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
 );
 
 CREATE TABLE Art_rec (
@@ -114,10 +132,39 @@ CREATE TABLE Comunidade (
   qtd_posts           int
 );
 
+CREATE TABLE Visualiza_C (
+  ID_V_C int PRIMARY KEY,
+  ID_A int,
+  Cod_U int,
+  Qtd_View int,
+  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
+  FOREIGN KEY (ID_c) REFERENCES Comnidade (ID_c)
+);
+
+CREATE TABLE Eventos (
+  ID_Ev int PRIMARY KEY,
+  ID_c int,
+  Data date,
+  Hora time,
+  Endereco varchar (100),
+  Pnt_Ref varchar(80),
+  Valor_Ing float,
+  Qtd_Ing int,
+  FOREIGN KEY (ID_c) REFERENCES Comunidade (ID_c)
+);
+
 CREATE TABLE Din_arrecadado (
   ID_d                    int PRIMARY KEY,
   valor                   float,
   banco                   varchar (300)
+);
+
+CREATE TABLE Banco (
+  ID_Banco int PRIMARY KEY,
+  ID_d int,
+  Nome_Banc varchar(50),
+  Forma_Trans varchar(20),
+  FOREIGN KEY (ID_d) REFERENCES Din_arrecadado (ID_d)
 );
 
 CREATE TABLE Ongs(
