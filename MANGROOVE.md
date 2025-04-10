@@ -27,6 +27,13 @@ CREATE TABLE Usuarios (
   Data_nasc date
 );
 
+CREATE TABLE Anuncio (
+  ID_A        int PRIMARY KEY,
+  Tempo       time,
+  Valor_Gasto float,
+  CNPJ        int
+);
+
 CREATE TABLE Musica_fav (
   ID_Fav int PRIMARY KEY,
   Email varchar(50),
