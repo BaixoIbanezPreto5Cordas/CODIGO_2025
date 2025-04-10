@@ -27,6 +27,15 @@ CREATE TABLE Usuarios (
   Data_nasc date
 );
 
+CREATE TABLE Escuta (
+  ID_Es int PRIMARY KEY,
+  ID_music int,
+  Cod_U varchar(50),
+  Rep int,
+  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
+  FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
+);
+
 CREATE TABLE Anuncio (
   ID_A        int PRIMARY KEY,
   Tempo       time,
