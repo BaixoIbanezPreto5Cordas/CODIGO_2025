@@ -147,7 +147,7 @@ CREATE TABLE Visualiza_C (
   Cod_U int,
   Qtd_View int,
   FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
-  FOREIGN KEY (ID_c) REFERENCES Comnidade (ID_c)
+  FOREIGN KEY (ID_c) REFERENCES Comunidade (ID_c)
 );
 
 CREATE TABLE Eventos (
