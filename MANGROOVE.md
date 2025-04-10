@@ -13,10 +13,12 @@ CREATE TABLE Musicas (
   duracao          varchar (10)
 );
 
+INSERT INTO Musicas VALUES (19872617, "Ainda gosto dela", "Pop Rock", "Hoje acordei sem lembrar, Se vivi ou se sonhei, Você aqui nesse lugar, Que eu ainda não deixei.", 22000000, 28000, "3:40") 
+
 CREATE TABLE Musicos (
   Nome_musico       varchar (50) PRIMARY KEY,
-  Data_Pub          date,
-  ID_music          int,
+  Data_Pub          varchar (10),
+  ID_music          varchar (10),
   FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
 );
 
