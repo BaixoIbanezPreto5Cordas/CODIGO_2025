@@ -28,7 +28,7 @@ CREATE TABLE Usuarios (
 );
 
 CREATE TABLE Musica_fav (
-  Cod_U int PRIMARY KEY,
+  ID_Fav int PRIMARY KEY,
   Email varchar(50),
   telefone int,
   rede_soc varchar(50)
