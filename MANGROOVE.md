@@ -31,7 +31,7 @@ CREATE TABLE Musica_fav (
   ID_Fav int PRIMARY KEY,
   Email varchar(50),
   telefone int,
-  rede_soc varchar(50)
+  rede_soc varchar(50),
   Cod_U    int,
 FOREIGN KEY (Cod_U ) REFERENCES Usuarios (Cod_U )
 );
