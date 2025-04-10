@@ -145,8 +145,9 @@ CREATE TABLE Visualiza_C (
   ID_V_C int PRIMARY KEY,
   ID_A int,
   Cod_U int,
+  ID_c	int,
   Qtd_View int,
-  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
+  FOREIGN KEY (Cod_U) REFERENCES Usuarios (Cod_U),
   FOREIGN KEY (ID_c) REFERENCES Comunidade (ID_c)
 );
 
