@@ -66,6 +66,18 @@ CREATE TABLE Rede_Soc (
   FOREIGN KEY (CPF) REFERENCES Artistas (CPF)
 );
 
+CREATE TABLE Posta (
+  Data          date PRIMARY KEY,
+  Hora          time,
+  Hashtag        varchar (30),
+  Qtd_View      int,
+  Qtd_Like      int,
+  CPF           int,
+  ID_c          int,
+  FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
+  FOREIGN KEY (ID_c) REFERENCES Comunidade (ID_c)
+);
+
 CREATE TABLE Comunidade (
   ID_c                int PRIMARY KEY,	
   qtd_seg             int,
