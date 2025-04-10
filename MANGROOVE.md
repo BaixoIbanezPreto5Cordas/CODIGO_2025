@@ -34,6 +34,18 @@ CREATE TABLE Anuncio (
   CNPJ        int
 );
 
+CREATE TABLE PubAlvo_An (
+  COD_PubAlvo int PRIMARY KEY,
+  ID_A        int,
+  Gostos      varchar(50),
+  Idade       int,
+  Class_E     varchar (30),
+  Genero      varchar (30),
+  Ocup        varchar (100),
+  Nat         varchar (2),
+  FOREIGN KEY (ID_A) REFERENCES Anuncio (ID_A)
+);
+
 CREATE TABLE Musica_fav (
   ID_Fav int PRIMARY KEY,
   Email varchar(50),
