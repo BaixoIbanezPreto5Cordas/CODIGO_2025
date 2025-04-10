@@ -10,7 +10,7 @@ CREATE TABLE Musicas (
   letra            varchar (500),
   views            int,
   likes            int,
-  duracao          time
+  duracao          varchar (10)
 );
 
 CREATE TABLE Musicos (
@@ -24,7 +24,7 @@ CREATE TABLE Usuarios (
   Cod_U Int PRIMARY KEY,
   Nome varchar(50),
   Nat varchar(2),
-  Data_nasc date
+  Data_nasc varchar (10)
 );
 
 CREATE TABLE Escuta (
@@ -38,7 +38,7 @@ CREATE TABLE Escuta (
 
 CREATE TABLE Anuncio (
   ID_A        int PRIMARY KEY,
-  Tempo       time,
+  Tempo       varchar (10),
   Valor_Gasto float,
   CNPJ        int
 );
@@ -78,7 +78,7 @@ CREATE TABLE Contatos_U (
   Cod_U        Int,
   Nome         varchar(50),
   Nat          varchar(2),
-  Data_nasc    date,
+  Data_nasc    varchar (10),
  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U)
 );
 
@@ -92,7 +92,7 @@ CREATE TABLE Artistas (
 
 CREATE TABLE Produz (
   ID_P             int PRIMARY KEY,
-  Data             date,
+  Data             varchar (10),
   CPF              int,
   ID_music         int,
   FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
@@ -102,8 +102,8 @@ CREATE TABLE Produz (
 CREATE TABLE Art_rec (
   ID_TransArt                       int PRIMARY KEY,
   Valor                             float,
-  Data                              date,
-  Hora                              time,
+  Data                              varchar (10),
+  Hora                              varchar (10),
   ID_D                              int,
   CPF                               int,
   FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
@@ -130,9 +130,9 @@ CREATE TABLE Comunidade (
 );
 
 CREATE TABLE Posta (
-  Data          date PRIMARY KEY,
-  Hora          time,
-  Hashtag        varchar (30),
+  Data          varchar (10) PRIMARY KEY,
+  Hora          varchar (10),
+  Hashtag       varchar (30),
   Qtd_View      int,
   Qtd_Like      int,
   CPF           int,
@@ -154,8 +154,8 @@ CREATE TABLE Visualiza_C (
 CREATE TABLE Eventos (
   ID_Ev int PRIMARY KEY,
   ID_c int,
-  Data date,
-  Hora time,
+  Data varchar (10),
+  Hora varchar (10),
   Endereco varchar (100),
   Pnt_Ref varchar(80),
   Valor_Ing float,
@@ -194,8 +194,8 @@ CREATE TABLE Ong_rec (
   ID_TransOng                  int PRIMARY KEY,
   CNPJ                         int,
   Valor                        float,
-  Data                         date,
-  Hora                         time,
+  Data                         varchar (10),
+  Hora                         varchar (10),
   ID_D                         int,
   FOREIGN KEY (ID_D) REFERENCES Din_arrecadado (ID_D)
 );
@@ -225,7 +225,7 @@ CREATE TABLE Cntt_Publi (
 
 CREATE TABLE PubAlvo_Ag(
   Gostos        varchar(50),
-  Data_Nasc     varchar(50),
+  Idade         int,
   Class_E       varchar(30),
   Genero        varchar(30),
   Ocup          varchar(100),
