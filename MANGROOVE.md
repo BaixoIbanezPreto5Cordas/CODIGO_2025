@@ -114,6 +114,12 @@ CREATE TABLE Rede_Soc (
   FOREIGN KEY (CPF) REFERENCES Artistas (CPF)
 );
 
+CREATE TABLE Comunidade (
+  ID_c                int PRIMARY KEY,	
+  qtd_seg             int,
+  qtd_posts           int
+);
+
 CREATE TABLE Posta (
   Data          date PRIMARY KEY,
   Hora          time,
@@ -124,12 +130,6 @@ CREATE TABLE Posta (
   ID_c          int,
   FOREIGN KEY (CPF) REFERENCES Artistas (CPF),
   FOREIGN KEY (ID_c) REFERENCES Comunidade (ID_c)
-);
-
-CREATE TABLE Comunidade (
-  ID_c                int PRIMARY KEY,	
-  qtd_seg             int,
-  qtd_posts           int
 );
 
 CREATE TABLE Visualiza_C (
