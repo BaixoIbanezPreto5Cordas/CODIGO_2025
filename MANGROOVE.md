@@ -126,3 +126,12 @@ CREATE TABLE Cntt_Publi (
   FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
 );
 
+CREATE TABLE PubAlvo_Ag(
+  Gostos        varchar(50),
+  Data_Nasc     varchar(50),
+  Class_E       varchar(30),
+  Genero        varchar(30),
+  Ocup          varchar(100),
+  Nat           varchar(2),
+  FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
+);
