@@ -13,7 +13,7 @@ CREATE TABLE Musicas (
   duracao          varchar (10)
 );
 
-INSERT INTO Musicas VALUES (19872617, "Ainda gosto dela", "Pop Rock", "Hoje acordei sem lembrar, Se vivi ou se sonhei, Você aqui nesse lugar, Que eu ainda não deixei.", 22000000, 28000, "3:40") 
+INSERT INTO Musicas VALUES (19872617, "Ainda gosto dela", "Pop Rock", "Hoje acordei sem lembrar, Se vivi ou se sonhei, Você aqui nesse lugar, Que eu ainda não deixei.", 22000000, 28000, "00:03:40") 
 
 CREATE TABLE Musicos (
   Nome_musico       varchar (50) PRIMARY KEY,
@@ -22,12 +22,16 @@ CREATE TABLE Musicos (
   FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
 );
 
+INSERT INTO Musicos VALUES ("Skank", "09/09/08", 19872617);
+
 CREATE TABLE Usuarios (
-  Cod_U Int PRIMARY KEY,
-  Nome varchar(50),
-  Nat varchar(2),
-  Data_nasc varchar (10)
+  Cod_U    Int PRIMARY KEY,
+  Nome     varchar(50),
+  Nat      varchar(2),
+  Idade    int
 );
+
+INSERT INTO Usuarios VALUES (18273516, "GostoDeMetalPesado", "PE", 27);
 
 CREATE TABLE Escuta (
   ID_Es int PRIMARY KEY,
@@ -38,24 +42,31 @@ CREATE TABLE Escuta (
   FOREIGN KEY (ID_music) REFERENCES Musicas (ID_music)
 );
 
+INSERT INTO Escuta VALUES (82739165, 19872617, 18273516, 3); 
+
 CREATE TABLE Anuncio (
   ID_A        int PRIMARY KEY,
   Tempo       varchar (10),
   Valor_Gasto float,
-  CNPJ        int
+  CNPJ_Ag        int,
+  FOREIGN KEY (CNPJ_Ag) REFERENCES Agen_Pub (CNPJ_Ag)
 );
+
+INSERT INTO Anuncio VALUES (91863517, 00:00:50, 49.09, 00.623.904/0001-73);
 
 CREATE TABLE Visualiza_A (
   ID_V_A   int PRIMARY KEY,
   ID_A     int,
   Cod_U    int,
   Qtd_View int,
-  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U),
+  FOREIGN KEY (Cod_U) REFERENCES Usuarios (Cod_U),
   FOREIGN KEY (ID_A) REFERENCES Anuncio (ID_A)
 );
 
+INSERT INTO Visualiza_A VALUES (89716356, 91863517, 18273516, 888000);
+
 CREATE TABLE PubAlvo_An (
-  COD_PubAlvo int PRIMARY KEY,
+  Cod_PubAlvo int PRIMARY KEY,
   ID_A        int,
   Gostos      varchar(50),
   Idade       int,
@@ -66,22 +77,28 @@ CREATE TABLE PubAlvo_An (
   FOREIGN KEY (ID_A) REFERENCES Anuncio (ID_A)
 );
 
+INSERT INTO PubAlvo_An VALUES (89762809, 91863517, "MPB, Pagode, Samba e Pisadinha", 45, "Classe media", "Homem", "Engenheiro", "AL"); 
+
 CREATE TABLE Musica_fav (
-  ID_Fav int PRIMARY KEY,
-  Email varchar(50),
-  telefone int,
-  rede_soc varchar(50),
-  Cod_U    int,
+  ID_Fav             int PRIMARY KEY,
+  Cod_U              int,
+  Genero             varchar (50),
+  Cpstrs             varchar (50),
+  Nome_Música        varchar (50),
+  Tempo_Duracao      varchar(10),
+  Cod_U              int,
 FOREIGN KEY (Cod_U ) REFERENCES Usuarios (Cod_U )
 );
 
 CREATE TABLE Contatos_U (
-  ID_Con_U     int PRIMARY KEY,
-  Cod_U        Int,
-  Nome         varchar(50),
-  Nat          varchar(2),
-  Data_nasc    varchar (10),
- FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U)
+  IDcntt_U      int PRIMARY KEY,
+  Email         varchar (50),
+  Telefone      int,
+  Insta         varchar (50),
+  Facebook      varchar (50),
+  Tiktok        varchar (50),
+  Cod_U         int,
+  FOREIGN KEY (Cod_U) REFERENCES Usuários (Cod_U)
 );
 
 CREATE TABLE Artistas (
@@ -89,6 +106,7 @@ CREATE TABLE Artistas (
   nome              varchar (100),
   nat               varchar (2),
   cidade            varchar (30),
+  Cod_art           int,
   album             varchar (50)
 );
 
@@ -180,7 +198,7 @@ CREATE TABLE Banco (
 );
 
 CREATE TABLE Ongs(
-  CNPJ        int PRIMARY KEY,
+  CNPJ_Ong        int PRIMARY KEY,
   Sede        varchar(100)
 );
 
@@ -189,12 +207,12 @@ CREATE TABLE Cntt_ONG (
   Telefone    int,
   Rede_Soc    varchar(50),
   CNPJ            int,
-  FOREIGN KEY (CNPJ) REFERENCES Ongs (CNPJ)
+  FOREIGN KEY (CNPJ_Ong) REFERENCES Ongs (CNPJ_Ong)
 );
 
 CREATE TABLE Ong_rec (
   ID_TransOng                  int PRIMARY KEY,
-  CNPJ                         int,
+  CNPJ_Ong                         int,
   Valor                        float,
   Data                         varchar (10),
   Hora                         varchar (10),
@@ -208,12 +226,12 @@ CREATE TABLE Loc_Op(
   Cidade Varchar(30),
   Bairro Varchar(30),
   Rua Varchar(30),
-  CNPJ int,
-  Foreign key (CNPJ) REFERENCES Ongs (CNPJ)
+  CNPJ_Ong int,
+  Foreign key (CNPJ_Ong) REFERENCES Ongs (CNPJ_Ong)
 );
 
 CREATE TABLE Agen_Publi (
-  CNPJ          int PRIMARY KEY,
+  CNPJ_Ag          int PRIMARY KEY,
   Empresa       varchar (100)
 );
 
@@ -221,8 +239,8 @@ CREATE TABLE Cntt_Publi (
   Email         varchar (50) PRIMARY KEY,
   Telefone      int,
   Red_Soc       varchar (50),
-  CNPJ          int,
-  FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
+  CNPJ_Ag          int,
+  FOREIGN KEY (CNPJ_Ag) REFERENCES Agen_Publi (CNPJ_Ag)
 );
 
 CREATE TABLE PubAlvo_Ag(
@@ -233,5 +251,5 @@ CREATE TABLE PubAlvo_Ag(
   Ocup          varchar(100),
   Nat           varchar(2),
   CNPJ          int,
-  FOREIGN KEY (CNPJ) REFERENCES Agen_Publi (CNPJ)
+  FOREIGN KEY (CNPJ_Ag) REFERENCES Agen_Publi (CNPJ_Ag)
 );
