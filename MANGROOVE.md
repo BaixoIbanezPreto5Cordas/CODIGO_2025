@@ -1,3 +1,4 @@
+``` sql
 DROP TABLE Customers;
 DROP TABLE Orders;
 DROP TABLE Shippings;
