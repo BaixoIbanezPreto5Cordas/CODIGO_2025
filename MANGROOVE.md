@@ -68,7 +68,7 @@ CREATE TABLE Contatos_U (
   FOREIGN KEY (Cod_U) REFERENCES Usuarios (Cod_U)
 );
 
-INSERT INTO Contatos_U VALUES (22123456, "RogerinDoInga@gmail.com", "67984231", "@JulinhoDaVan", "RenanComCigarro", "Maurilio_Dos_Anjos", 18273516); 
+INSERT INTO Contatos_U VALUES (22123456, "RogerinDoInga@gmail.com", "67984231", "@JulinhoDaVan", "RenanComCigarro", "@Maurilio_Dos_Anjos", 18273516); 
 
 CREATE TABLE Artistas (
   CPF               varchar(15) PRIMARY KEY,
