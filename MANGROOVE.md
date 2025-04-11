@@ -1,16 +1,16 @@
-``` sql
+```sql
 DROP TABLE Customers;
 DROP TABLE Orders;
 DROP TABLE Shippings;
 
 CREATE TABLE Musicas (
   ID_music         int PRIMARY KEY,
-  nome             varchar (50),
-  genero           varchar (50),
-  letra            varchar (500),
-  views            int,
-  likes            int,
-  duracao          varchar (10)
+  Nome             varchar (50),
+  Genero           varchar (50),
+  Letra            varchar (500),
+  Views            int,
+  Likes            int,
+  Duracao          varchar (10)
 );
 
 INSERT INTO Musicas VALUES (19872617, "Ainda gosto dela", "Pop Rock", "Hoje acordei sem lembrar, Se vivi ou se sonhei, Você aqui nesse lugar, Que eu ainda não deixei.", 22000000, 28000, "00:03:40");
@@ -94,11 +94,10 @@ INSERT INTO Produz VALUES (65432891, "12/07/2005", "123.456.789-09", 19872617);
 
 CREATE TABLE Din_arrecadado (
   ID_D                    int PRIMARY KEY,
-  valor                   float,
-  banco                   varchar (300)
+  valor                   float
 );
 
-INSERT INTO Din_arrecadado VALUES(9090, 20000.95, "Banco Brasil");
+INSERT INTO Din_arrecadado VALUES(9090,  20000.95);
 
 CREATE TABLE Art_rec (
   ID_TransArt                       int PRIMARY KEY,
