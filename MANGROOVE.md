@@ -79,7 +79,7 @@ CREATE TABLE Artistas (
   Album             varchar (50)
 );
 
-INSERT INTO Artistas VALUES ("123.456.789-09", "FBC", "MG", "Belo Horizonte(BH)", "44423328", "BAILE");
+INSERT INTO Artistas VALUES ("123.456.789-09", "FBC", "MG", "Belo Horizonte(BH)", 44423328, "BAILE");
 
 CREATE TABLE Produz (
   ID_P             int PRIMARY KEY,
