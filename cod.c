@@ -34,6 +34,7 @@ int main () {
 }
 */
 
+/*
   #include <stdio.h>
 int main () {
   int ano = 0;
@@ -46,5 +47,26 @@ int main () {
   }
   return 0;
 }
+*/
 
+    #include <stdio.h>
+int main () {
+  int num1 = 0;
+  int num2 = 0;
+  int num3 = 0;
+  printf("Digite o primeiro número de sua escolha\n");
+  scanf("%d", &num1);
+   printf("Digite o segundo número de sua escolha\n");
+  scanf("%d", &num2);
+   printf("Digite o terceiro número de sua escolha\n");
+  scanf("%d", &num3);
+    if ((num1 >= num2) && (num2 >= num3)) {
+        printf("O maior é %d", num1);
+    } else if ((num3 >= num2) && (num2 >= num1)) {
+        printf("O maior é %d", num3);
+    } else if ((num2 >= num3) && (num3 >= num1)) {
+        printf("O maior é %d", num2);
+    }
+  return 0;  
+} 
 
