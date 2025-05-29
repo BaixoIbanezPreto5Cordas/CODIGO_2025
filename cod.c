@@ -21,6 +21,7 @@ int main() {
 //códigos dia 28/05/2025 - Par ou Ímpar; Ano Bissexto; Número maior entre três
 /*
   #include <stdio.h>
+  
 int main () {
   int num = 0;
   printf("Digite um número de sua escolha\n");
@@ -36,6 +37,7 @@ int main () {
 
 /*
   #include <stdio.h>
+  
 int main () {
   int ano = 0;
   printf("Digite um ano de sua escolha\n");
@@ -50,6 +52,7 @@ int main () {
 */
 /*
     #include <stdio.h>
+    
 int main () {
   int num1 = 0;
   int num2 = 0;
@@ -72,8 +75,8 @@ int main () {
 
 */
 
-//códigos dia 29/05/2025: Converter ºF para ºC
-
+//códigos dia 29/05/2025: Converter ºF para ºC, Inflação, 
+/*
 include <stdio.h>
 
 int main() {
@@ -86,3 +89,20 @@ int main() {
     printf ("A temperatura em Celcius seria de %.2f", tc);
 } 
 
+*/
+
+#include <stdio.h>
+
+int main() {
+    float preco;
+    printf ("Coloque o preço do produto abaixo \n");
+    scanf ("%f", &preco);
+    if (preco >= 100.00) {
+        preco = (preco * 1.20);
+        printf ("O preço total será de R$%1.2f", preco);
+    } else if (preco < 100.00) {
+        preco = (preco * 1.10);
+        printf ("O preço total será de R$%1.2f", preco);
+    }
+    return 0;
+}
