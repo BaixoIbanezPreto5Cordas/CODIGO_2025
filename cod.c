@@ -1,4 +1,4 @@
-//códigos dia 23/05/2025 - Biblioteca
+//códigos dia 23/05/2025 - Biblioteca, Soma de dois números, Média de 6 números (notas), 
 
 /* #include <stdio.h>
 
@@ -16,6 +16,42 @@ int main() {
     printf("O ID de sua compra é: %f", IDdaCompra);
     return 0;
 }
+
+#include <stdio.h>
+
+int main() {
+    float num1, num2;
+    printf ("Escolha dois números para realizar a soma e digite-os abaixo \n");
+    scanf ("%f\n", &num1);
+    scanf ("%f" ,&num2);
+    float soma = num1 + num2;
+    printf ("A soma dos números é de %3.2f \n:", soma);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    float nota1 = 0.0;
+    float nota2 = 0.0;
+    float nota3 = 0.0;
+    float nota4 = 0.0;
+    float nota5 = 0.0;
+    float nota6 = 0.0;
+    printf ("Digite as 6 notas de desenvolvimento de sistemas: \n");
+    scanf ("%f\n", &nota1);
+    scanf ("%f\n", &nota2);
+    scanf ("%f\n", &nota3);
+    scanf ("%f\n", &nota4);
+    scanf ("%f\n", &nota5);
+    scanf ("%f", &nota6);
+    float notafinal = ((nota1 + nota2 + nota3 + nota4 + nota5 + nota6) / 6);
+    printf ("A sua média final é de %.2f\n:", notafinal);
+    return 0;
+}
+
+
+
 */
 
 //códigos dia 28/05/2025 - Par ou Ímpar; Ano Bissexto; Número maior entre três
