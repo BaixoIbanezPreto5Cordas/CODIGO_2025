@@ -1,4 +1,4 @@
-//códigos dia 23/05/22025
+//códigos dia 23/05/2025 - Biblioteca
 
 /* #include <stdio.h>
 
@@ -18,7 +18,7 @@ int main() {
 }
 */
 
-//códigos dia 28/05/2025
+//códigos dia 28/05/2025 - Par ou Ímpar; Ano Bissexto; Número maior entre três
 /*
   #include <stdio.h>
 int main () {
@@ -48,7 +48,7 @@ int main () {
   return 0;
 }
 */
-
+/*
     #include <stdio.h>
 int main () {
   int num1 = 0;
@@ -69,4 +69,8 @@ int main () {
     }
   return 0;  
 } 
+
+*/
+
+
 
