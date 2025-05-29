@@ -72,5 +72,17 @@ int main () {
 
 */
 
+//códigos dia 29/05/2025: Converter ºF para ºC
 
+include <stdio.h>
+
+int main() {
+    float tf, tc;
+    printf ("Digite uma temperatura em Fahrenheit para a conversão: \n");
+    scanf ("%f", &tf);
+
+    tc = (tf - 32) * 5 / 9;
+
+    printf ("A temperatura em Celcius seria de %.2f", tc);
+} 
 
