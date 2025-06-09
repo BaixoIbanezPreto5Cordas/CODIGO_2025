@@ -175,8 +175,8 @@ int main() {
 #include <math.h>
 
 int main() {
-    printf ("Digite o valor de uma tangente abaixo\n");
     double tg;
+    printf ("Digite o valor de uma tangente abaixo\n");
     scanf ("%lf", &tg);
     printf ("O ângulo que corresponde a tangente %.3lf é de aproximadamente %.3lf graus.", tg, atan(tg));
     return 0;
