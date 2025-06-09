@@ -125,7 +125,7 @@ int main() {
     printf ("A temperatura em Celcius seria de %.2f", tc);
 } 
 
-*/
+
 
 #include <stdio.h>
 
@@ -142,3 +142,44 @@ int main() {
     }
     return 0;
 }
+
+
+//códigos dia 05/06/2025: Desafio.
+#include <stdio.h>
+
+int main() {
+    int prateleira = 0;
+    printf ("Escolha o numero da prateleira que deseja comprar a fruta: \n");
+    printf ("Prateleira 1: Banana = 10,50 (com desconto de 10%%) \n"); 
+    printf ("Prateleira 2: Melancia = 32,50 (com desconto de 5%%) \n"); 
+    printf ("Prateleira 3: Abacaxi Podre = 15,99 (com desconto de 100%%) \n\n");
+    scanf ("%d", &prateleira);
+    if (prateleira == 1){
+        float total_gasto = 10.50 * 0.90;
+        printf ("sua compra deu R$%.2f. \n", total_gasto);
+    }
+    if (prateleira == 2){
+        float total_gasto = 32.50 * 0.95;
+        printf("sua compra deu R$%.2f. \n", total_gasto);
+    }
+    if (prateleira == 3){
+        float total_gasto = 15.99 * 0;
+        printf ("sua compra deu R$%.2f. (não nos responsabilizamos caso haja alguma forma de complicação com quem consuma este abacaxi) \n", total_gasto);
+    }
+    return 0;
+}
+
+//código dia 09/06/2025 - Biblioteca Math.h
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    printf ("Digite o valor de uma tangente abaixo\n");
+    double tg;
+    scanf ("%lf", &tg);
+    printf ("O ângulo que corresponde a tangente %.3lf é de aproximadamente %.3lf graus.", tg, atan(tg));
+    return 0;
+}
+
+*/
