@@ -183,3 +183,40 @@ int main() {
 }
 
 */
+
+//código dia 10/06/25
+
+#include <stdio.h>
+
+int main() {
+    float valorum, valordois, valortres;
+    printf ("Digite um valor abaixo \n");
+    scanf ("%f", &valorum);
+    scanf ("%f", &valordois);
+    scanf ("%f", &valortres);
+
+    if ((valorum < valordois) &&  (valordois < valortres)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valorum, valordois, valortres);
+    }
+
+    else if ((valortres < valordois) && (valordois < valorum)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valortres, valordois, valorum);
+    }
+
+    else if ((valordois < valortres) && (valortres < valorum)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valordois, valortres, valorum);
+    }
+
+    else if ((valordois < valorum) && (valorum < valortres)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valordois, valorum, valortres);
+    }
+
+    else if ((valortres < valorum) && (valorum < valordois)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valortres, valorum, valordois);
+    }
+    else if ((valorum < valortres) && (valorum < valordois)) {
+        printf ("Em ordem crescente: %.2f, %.2f, %.2f.", valorum, valortres, valordois);    
+    }
+    return 0;   
+}
+
