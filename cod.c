@@ -186,6 +186,7 @@ int main() {
 
 //código dia 10/06/25
 
+/*
 #include <stdio.h>
 
 int main() {
@@ -219,4 +220,35 @@ int main() {
     }
     return 0;   
 }
+*/
 
+//códigos 18/06/2025 - Contador
+
+/*
+#include <stdio.h>
+
+int main () {
+  int i = 0;
+  for (i = 0; i <= 5; i++) {
+    printf ("Contador: %d\n", i);
+  }
+  return 0;
+}
+*/
+
+#include <stdio.h>
+
+int main () {
+    float nota = 0;
+    while (nota < 0 | nota > 10) {
+        printf ("Digite as notas para calcular a média: \n");
+        scanf ("%f", &nota);
+        if (nota < 0 | nota > 10) {
+            printf ("Nota inválida, por favor, tente novamente \n");
+        }
+        else {
+            float media = () 
+            printf ("O valor da média seria de: \n %f", media);
+                
+        }
+    }
